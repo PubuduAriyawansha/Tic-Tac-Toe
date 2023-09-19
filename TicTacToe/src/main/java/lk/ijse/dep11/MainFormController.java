@@ -66,7 +66,7 @@ public class MainFormController  {
                                     player=-1;
                                 } else {
                                     txtHead.setText("Player O turn");
-                                    System.out.println(board.counter);
+
                                 }
                             }
                         }

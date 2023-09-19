@@ -6,13 +6,18 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.MainFormController">
    <children>
       <AnchorPane prefHeight="100.0" prefWidth="300.0">
          <children>
-            <Label fx:id="txtHead" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="32.0" prefWidth="282.0" text="Label" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label fx:id="txtHead" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="32.0" prefWidth="282.0" style="-fx-background-color: lightblue;" text="Label" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
             <Button fx:id="btnNew" layoutX="190.0" layoutY="62.0" mnemonicParsing="false" onAction="#btnNewOnAction" text="New Game" />
          </children>
       </AnchorPane>
