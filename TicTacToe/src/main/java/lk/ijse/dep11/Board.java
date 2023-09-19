@@ -6,7 +6,7 @@ public class Board {
     char [][] grid;
     int counter;
 
-    public Board{
+    public Board() {
         counter=0;
         grid=new char[3][3];
         for (int i = 0; i < 3; i++) {
