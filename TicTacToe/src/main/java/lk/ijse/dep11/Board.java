@@ -85,5 +85,6 @@ public class Board {
                 grid[i][j] = '.'; // Set each position to empty
             }
         }
+        Player.board.counter=0;
     }
 }

@@ -66,6 +66,7 @@ public class MainFormController  {
                                     player=-1;
                                 } else {
                                     txtHead.setText("Player O turn");
+                                    System.out.println(board.counter);
                                 }
                             }
                         }
@@ -162,6 +163,7 @@ public class MainFormController  {
         }
 
         player = 0;
+
 
         // Reset the game status label
         txtHead.setText("Player X turn");
