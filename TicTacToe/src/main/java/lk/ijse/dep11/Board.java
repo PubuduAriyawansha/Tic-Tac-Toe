@@ -59,12 +59,12 @@ public class Board {
             }
         }
 
-        if(grid[2][0]==grid[1][1] && grid[1][1]==grid[0][2]){
-            if(grid[0][0]!='.'){
+        if(grid[0][2]==grid[1][1] && grid[1][1]==grid[2][0]){
+            if(grid[0][2]!='.'){
                 sequence = new String[3];
-                sequence[0]=2+","+0;
+                sequence[0]=0+","+2;
                 sequence[1]=1+","+1;
-                sequence[2]=0+","+2;
+                sequence[2]=2+","+0;
                 return sequence;
             }
         }

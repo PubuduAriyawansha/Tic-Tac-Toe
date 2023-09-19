@@ -11,7 +11,7 @@
    <children>
       <AnchorPane prefHeight="100.0" prefWidth="300.0">
          <children>
-            <Label fx:id="txtHead" layoutX="108.0" layoutY="18.0" prefHeight="32.0" prefWidth="84.0" text="Label" />
+            <Label fx:id="txtHead" alignment="CENTER" layoutX="10.0" layoutY="27.0" prefHeight="32.0" prefWidth="282.0" text="Label" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
          </children>
       </AnchorPane>
       <GridPane fx:id="map" layoutY="100.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: lightgray;">
