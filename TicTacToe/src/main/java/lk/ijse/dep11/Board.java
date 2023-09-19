@@ -78,4 +78,12 @@ public class Board {
     public boolean isEmpty(int x, int y){
         return grid[x][y]=='.';
     }
+
+    public void clearBoard() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                grid[i][j] = '.'; // Set each position to empty
+            }
+        }
+    }
 }

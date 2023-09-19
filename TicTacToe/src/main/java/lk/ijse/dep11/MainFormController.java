@@ -1,8 +1,10 @@
 package lk.ijse.dep11;
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,18 +14,22 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainFormController implements Initializable {
+public class MainFormController  {
     public Label txtHead;
 
 
     static int player=0;
     public GridPane map;
+    public Button btnNew;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    Player p1 ;
+    Player p2 ;
 
-        Player p1 = new Player('X');
-        Player p2 = new Player('O');
+
+    public void initialize() {
+
+        p1 = new Player('X');
+        p2 = new Player('O');
 
         Board board = new Board();
         Player.board=board;
@@ -100,6 +106,7 @@ public class MainFormController implements Initializable {
             }
         }
         txtHead.setText("Player X turn");
+
     }
 
     public static Node getNode( int row, int column, GridPane gridPane){
@@ -142,6 +149,25 @@ public class MainFormController implements Initializable {
                 }
             }
         }
+    }
+
+    public void btnNewOnAction(ActionEvent actionEvent) {
+        p1 = new Player('X');
+        p2 = new Player('O');
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                ImageView Imv = (ImageView) getNode(i,j,map);
+                Imv.setImage(new Image(getURL("empty.png")));
+            }
+        }
+
+        player = 0;
+
+        // Reset the game status label
+        txtHead.setText("Player X turn");
+
+        // Clear the board's state
+        Player.board.clearBoard();
     }
 
 }
