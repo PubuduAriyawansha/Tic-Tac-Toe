@@ -4,6 +4,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 import java.io.File;
@@ -12,9 +14,10 @@ import java.util.ResourceBundle;
 
 public class MainFormController implements Initializable {
     public Label txtHead;
-    public GridPane grid;
+
 
     static int player=0;
+    public GridPane map;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,6 +43,28 @@ public class MainFormController implements Initializable {
         return "file:\\"+absolute+"src\\main\\resources\\view\\images\\"+name;
     }
 
+    void update(char[][] grid){
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if(grid[i][j]=='X') {
+                    ImageView Imv = (ImageView)getNode(i, j, map);
+                    Imv.setImage(new Image(getURL("x_blue.png")));
 
+                } else if (grid[i][j] == 'O') {
+                    ImageView Imv = (ImageView)getNode(i, j, map);
+                    Imv.setImage(new Image(getURL("o_red.png")));
+                } else if (grid[i][j]=='.') {
+                    ImageView Imv = (ImageView)getNode(i, j, map);
+                    Imv.setImage(new Image(getURL("empty.png")));
+                } else if (grid[i][j]=='1') {
+                    ImageView Imv = (ImageView)getNode(i, j, map);
+                    Imv.setImage(new Image(getURL("x_yellow.png")));
+                } else if (grid[i][j]=='2') {
+                    ImageView Imv = (ImageView)getNode(i, j, map);
+                    Imv.setImage(new Image(getURL("o_yellow.png")));
+                }
+            }
+        }
+    }
 
 }

@@ -14,7 +14,7 @@
             <Label fx:id="txtHead" layoutX="108.0" layoutY="18.0" prefHeight="32.0" prefWidth="84.0" text="Label" />
          </children>
       </AnchorPane>
-      <GridPane fx:id="grid" layoutY="100.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: lightgray;">
+      <GridPane fx:id="map" layoutY="100.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: lightgray;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
